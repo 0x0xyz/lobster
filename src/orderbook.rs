@@ -115,6 +115,12 @@ impl OrderBook {
         self.traded_volume
     }
 
+    /// Return the highest bid price, if present.
+    #[inline(always)]
+    pub fn order_arena(&self) -> &OrderArena {
+        &self.arena
+    }
+
     /// Return the order book depth as a [`BookDepth`] struct, up to the
     /// specified level. Bids and offers at the same price level are merged in a
     /// single [`BookLevel`] struct.
