@@ -34,7 +34,6 @@ impl OrderArena {
         self.order_map.get(&id).map(|i| (self.orders[*i].price, *i))
     }
 
-    #[cfg(test)]
     pub fn get_full(&self, id: u128) -> Option<(u64, u64, usize)> {
         self.order_map
             .get(&id)
